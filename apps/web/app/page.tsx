@@ -17,7 +17,7 @@ export default function Home() {
   };
   return (
       <Button disabled={isLoading} onClick={handleClick}>
-        {isLoading && <Loader2/>}
+        {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin"/>}
         Click me
       </Button>
   );
