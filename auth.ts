@@ -14,3 +14,7 @@ secret: process.env.NEXTAUTH_SECRET,
 providers: [
     CredentialsProvider({
         name: 'credentials',
+        credentials: {
+        email: { label: 'email', type: "email" },
+        password: { label: 'password', type: "password" },
+},
