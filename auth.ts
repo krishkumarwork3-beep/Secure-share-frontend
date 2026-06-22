@@ -18,3 +18,11 @@ providers: [
         email: { label: 'email', type: "email" },
         password: { label: 'password', type: "password" },
 },
+async authorize(credentials) {
+    const res = await fetch(
+        `${process.env.API_BASE_URL}/auth/login`,
+        {
+            method: 'post',
+            headers: {
+                "Content-Type": "application/json",
+            },
