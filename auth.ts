@@ -52,3 +52,13 @@ if (res.ok && data.token) {
 
             return token;
         },
+        async session({ session, token }) {
+            session.user = {
+                ...session.user,
+                accessToken: token.accessToken as string,
+            };
+
+            return session;
+        }
+    }
+});
