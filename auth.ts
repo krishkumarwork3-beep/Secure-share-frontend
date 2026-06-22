@@ -6,3 +6,6 @@ export const {
     signIn,
     signOut,
 } = NextAuth({
+    pages: {
+    signIn: "/login",
+},
