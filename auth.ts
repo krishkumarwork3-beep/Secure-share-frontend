@@ -44,3 +44,11 @@ if (res.ok && data.token) {
         session: {
         strategy: 'jwt'
     },
+    callbacks: {
+        async jwt({ token, user }) {
+            if (user) {
+                token.accessToken = user.token;
+            }
+
+            return token;
+        },
