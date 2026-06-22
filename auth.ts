@@ -11,3 +11,6 @@ export const {
 },
 trustHost: true,
 secret: process.env.NEXTAUTH_SECRET,
+providers: [
+    CredentialsProvider({
+        name: 'credentials',
