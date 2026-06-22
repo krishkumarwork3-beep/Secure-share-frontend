@@ -31,3 +31,13 @@ async authorize(credentials) {
     password: credentials?.password,
 })
 });
+const data = await res.json();
+
+if (res.ok && data.token) {
+    return { token: data.token };
+} else {
+    return null;
+}
+            },
+        })
+    ],
