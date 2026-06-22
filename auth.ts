@@ -41,3 +41,6 @@ if (res.ok && data.token) {
             },
         })
     ],
+        session: {
+        strategy: 'jwt'
+    },
