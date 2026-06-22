@@ -16,9 +16,10 @@ export default function Home() {
       }, 2000);
   };
   return (
-      <Button disabled={isLoading} onClick={handleClick}>
-        {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin"/>}
+      <div className="flex justify-center items-center min-h-screen">
+      <Button isLoading={isLoading} onClick={handleClick}>
         Click me
       </Button>
+    </div>
   );
 }
